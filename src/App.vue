@@ -9,8 +9,7 @@
         <v-parallax :src="imgLink.firstView" height="600">
           <v-layout column align-center justify-center class="white--text">
             <h1
-              class="white--text mb-2 display-1 text-xs-center tategaki"
-              style=""
+              class="white--text mb-2 display-1 text-xs-center tategaki kanji"
             >求む、熱意ある学生。
           </h1>
             <div
@@ -129,7 +128,7 @@
                 <v-card-subtitle>迷っているあなたへ</v-card-subtitle>
                 <v-card-text>サークル・部活選びの参考に、TEDxNagoyaUの特徴やメンバーの声をまとめました！</v-card-text>
                 <v-row justify="left">
-                  <v-col xs="12" sm="6">
+                  <v-col xs="12" sm="12" md="6">
                     <div>
                       <v-card>
                         <v-card-title>メンバーの声</v-card-title>
@@ -178,7 +177,7 @@
                       </v-card>
                     </div>
                   </v-col>-->
-                  <v-col xs="12" sm="6">
+                  <v-col xs="12" sm="12" md="6">
                     <div>
                       <v-card class="mb-6">
                         <v-card-title>こんな人に入って欲しい！</v-card-title>
@@ -187,17 +186,31 @@
                       </v-card>
                     </div>
                     <div>
-                      <v-card class="mb-6" v-if="false">
-                        <v-card-title>参加のメリット</v-card-title>
-                        <v-card-subtitle></v-card-subtitle>
-                        <v-card-text>hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge</v-card-text>
+                      <v-card class="mb-6">
+                        <v-card-title>加入のメリット</v-card-title>
+                        <v-card-text>
+                          <ul>
+                            <li v-for="(item,index) in meritItems" :key="index">{{item.text}}</li>
+                          </ul>
+                          <p style="height: 0;user-select:none;opacity: 0">hogehogehogehogehogehogehogehogehogehogehogehogehoge</p><!--fu***************************************************k
+                            DONT DELETE THIS HOGEHOGEHOGEHOGEHOGEHOGEHOGEHOGEHOGEHOGEHOGEHOGE
+                            If you delete, display asdfa;lksdfjalskdf;aks;fkaj
+                          -->
+                        </v-card-text>
                       </v-card>
                     </div>
                     <div>
-                      <v-card v-if="false">
-                        <v-card-title>参加のメリット</v-card-title>
-                        <v-card-subtitle></v-card-subtitle>
-                        <v-card-text>hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge</v-card-text>
+                      <v-card>
+                        <v-card-title>加入のデメリット</v-card-title>
+                        <v-card-text>
+                          <ul>
+                            <li v-for="(item,index) in demeritItems" :key="index">{{item.text}}</li>
+                          </ul>
+                          <p style="height: 0;user-select:none;opacity: 0">hogehogehogehogehogehogehogehogehogehogehogehogehoge</p><!--fu***************************************************k
+                            DONT DELETE THIS HOGEHOGEHOGEHOGEHOGEHOGEHOGEHOGEHOGEHOGEHOGEHOGE
+                            If you delete, display asdfa;lksdfjalskdf;aks;fkaj
+                          -->
+                        </v-card-text>
                       </v-card>
                     </div>
                   </v-col>
@@ -267,20 +280,20 @@
   </v-app>
 </template>
 <style>
-@import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap&subset=japanese');
 .tategaki{
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   font-weight: 900; text-shadow: 2px 2px #000000
-}
+};
 .kanji{
   font-family: 'Noto Serif JP', serif;
-}
+};
 .about_section{
   /*background-image: url("https://live.staticflickr.com/7455/11340023366_af6c395af0_o.jpg");
   background-position: center;*/
-}
+};
 </style>
 <script>
 export default {
@@ -432,23 +445,20 @@ export default {
         },
       ],
       gray: "#FAFAFA",
-
+      meritItems: [
+        {text: "学生だけでゼロから企画できる！"},
+        {text: "日頃のミーティングや活動を通して、メンバーみんなが多方面で活躍していることを聞いて自分もモチベーションアップできる"},
+        {text: "今後生きていく上で役に立つ考え方を学んだり、スキルを身につけたりすることができる"}
+      ],
+      demeritItems: [
+        {text: "タスクがたまってしまったり、本番前になると忙しい日々が続く"},
+        {text: "他の人に入ってるサークルを説明するとき、説明が難しく大変"},
+        {text: "不定期で予定が入ることも！"}
+      ],
     }
   },
   created: async function () {
     this.$ga.page('/tedxnagoyau-rec-spr.html')
   }
-  /*head: {
-    title: function(){
-      return {
-        inner: "TEDxNagoyaU"
-      },
-      script: [
-        {
-          type: 'text/javascript', src: '"https://www.googletagmanager.com/gtag/js?id=UA-119308617-1', async: true
-        }
-      ]
-    }
-  }*/
 }
 </script>
