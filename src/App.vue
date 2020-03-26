@@ -366,7 +366,7 @@ export default {
       timeLineItems: [
         {
           title: "説明会に参加",
-          date: "4/16, 4/30",
+          date: "4/23, 5/7",
           text: "TEDxNagoyaUに加入を希望される方には必ず説明会に参加していただいています。もし参加が難しい場合は別途対応させていただきますので、Twitterやメールでご連絡ください。",
           btnName: "説明会詳細",
           btnLink: "#setsumeikai",
@@ -374,7 +374,7 @@ export default {
         },
         {
           title: "Salonに参加",
-          date: "4/23",
+          date: "4/30",
           text: "夏の本番イベントに向けて活動していくには、どんなものを作り上げていくのかイメージできることが大事です。サロンイベントを経験することで、加入後も明確なイメージを持ちながら活動できます！",
           btnName: null,
           btnLink: null,
@@ -382,7 +382,7 @@ export default {
         },
         {
           title: "応募",
-          date: "4/16 ~ 5/8",
+          date: "4/23 ~ 5/12",
           text: "「TEDxNagoyaUにメンバーとして参加したい！」と意思が固まったら、下記フォームから必要事項を入力してください。後日入力していただいた連絡先に面接日程の調整案内を送らせていただきます。",
           btnName: "申込フォーム",
           btnLink: null,
@@ -390,7 +390,7 @@ export default {
         },
         {
           title: "面接",
-          date: "4/23 ~ 5/13",
+          date: "5/7 ~ 5/19",
           text: "TEDxNagoyaUは、運営がうまくいくことだけではなく、新メンバーの方々がうまく活動できるかどうかを重視しています。そのため、簡単な面接でなぜ加入したいのかやTEDxNagoyaUを選んでいただいた理由などについてお聞きしています。",
           btnName: null,
           btnLink: null,
@@ -413,7 +413,7 @@ export default {
         {
           title: "info@tedxnagoyau.com",
           subtitle: null,
-          icon: "mdi-mail",
+          icon: "mdi-email",
           link: "mailto:info@tedxnagoyau.com"
         },
         {
