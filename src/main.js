@@ -3,6 +3,7 @@ import VueAnalytics from 'vue-analytics'
 //import VueHead from 'vue-head'
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
+import router from './router'
 
 Vue.config.productionTip = false
 
@@ -13,5 +14,6 @@ Vue.use(VueAnalytics, {
 
 new Vue({
   vuetify,
+  router,
   render: h => h(App)
 }).$mount('#app')
